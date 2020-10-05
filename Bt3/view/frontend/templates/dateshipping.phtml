@@ -1,0 +1,55 @@
+
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "form-name-scope": {
+                    "component": "Magenest_Bt3/js/NameModel",
+                    "template":"Magenest_Bt3/formName"
+                }
+            }
+        }
+    }
+}
+
+</script>
+
+
+<div style="display: inline-grid">
+    <label style="font-weight: bold; margin-bottom: 10px">Date Shipping:</label>
+    <input name="date_shipping" style="width: auto; margin-bottom: 15px" id="date_shipping" type="text" required/>
+</div>
+
+
+
+<div data-bind="scope: 'form-name-scope'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<!--<div class="widget">-->
+<!--    <button data-mage-init='{"buttonWidget":{"color":"red","width":"150px"}}'-->
+<!--            type="button"-->
+<!--            style="padding: 5px 10px 5px 10px"-->
+<!--            id="btn-widget"-->
+<!--    >-->
+<!--        don't click me-->
+<!--    </button>-->
+<!--</div>-->
+<!---->
+<!--<div style="height: 100px">-->
+<!--    <button data-mage-init='{"buttonCatchMe":{}}'-->
+<!--            type="button"-->
+<!--            style="padding: 5px 10px 5px 10px"-->
+<!--            id="btn-catch-me"-->
+<!--    >-->
+<!--        catch me-->
+<!--    </button>-->
+<!--</div>-->
+
+<script>
+    require(["dateShippingCalendar"], function (dateShippingCalendar) {
+        dateShippingCalendar();
+    });
+</script>

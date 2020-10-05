@@ -1,0 +1,11 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <head>
+        <css src="Magenest_Bt2::css/countdown.css"/>
+    </head>
+    <body>
+        <referenceContainer name="header-wrapper">
+            <block name="countdown.frontend.header" class="Magenest\Bt2\Block\CountDownHeader" template="Magenest_Bt2::countdown.phtml" cacheable="false"/>
+        </referenceContainer>
+    </body>
+</page>

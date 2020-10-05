@@ -1,0 +1,29 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Magenest_Bt2::magenest"
+             title="CountDown"
+             module="Magenest_Bt2"
+             sortOrder="40"
+             resource="Magento_Backend::admin"/>
+        <add id="Magenest_Bt2::countdown"
+             title="CountDown"
+             module="Magenest_Bt2"
+             sortOrder="40"
+             resource="Magenest_Bt2::admin"
+             parent="Magenest_Bt2::magenest"/>
+        <add id="Magenest_Bt2::countdownmanagement"
+             title="Countdown Management"
+             module="Magenest_Bt2"
+             sortOrder="40"
+             resource="Magenest_Bt2::admin"
+             action="bt2/countdown/index"
+             parent="Magenest_Bt2::countdown"/>
+        <add id="Magenest_Bt2::configuration"
+             title="Clock Configuration"
+             module="Magenest_Bt2"
+             sortOrder="40"
+             resource="Magenest_Bt2::admin"
+             action="admin/system_config/edit/section/clock/"
+             parent="Magenest_Bt2::countdown"/>
+    </menu>
+</config>

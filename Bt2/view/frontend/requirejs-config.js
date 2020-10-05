@@ -1,0 +1,9 @@
+var config = {
+    map:{
+        '*':{
+        }
+    },
+    config:{
+
+    }
+}

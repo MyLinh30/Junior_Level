@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation=
+    "urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+            id="Magenest_Test::show"
+            title="Gift Management"
+            module="Magenest_Test"
+            sortOrder="50"
+            resource="Magenest_Test::show"
+        />
+        <add
+            id="Magenest_Test::grid"
+            title="Gift Grid"
+            module="Magenest_Test"
+            sortOrder="55"
+            parent="Magenest_Test::show"
+            action="test/index/index/"
+            resource="Magenest_Test::grid"
+        />
+
+        <add
+            id="Magenest_Test::history"
+            title="Point Customer Management"
+            module="Magenest_Test"
+            sortOrder="50"
+            resource="Magenest_Test::history"
+        />
+        <add
+            id="Magenest_Test::all"
+            title="Point Grid"
+            module="Magenest_Test"
+            sortOrder="55"
+            parent="Magenest_Test::history"
+            action="test/index/history/"
+            resource="Magenest_Test::all"
+        />
+    </menu>
+</config>

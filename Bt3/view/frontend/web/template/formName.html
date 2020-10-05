@@ -1,0 +1,23 @@
+<div style="display: flex">
+    <div style="flex: 1">
+        <label>First name:
+            <input data-bind="value : first_name" style="width: 80%" type="text"/>
+        </label>
+    </div>
+    <div style="flex: 1">
+        <label>Last name:
+            <input data-bind="value : last_name" style="width: 80%" type="text"/>
+        </label>
+    </div>
+</div>
+<div style="display: flex; margin-top: 10px">
+    <div style="margin-right: 5px">
+        <button type="button" data-bind="click: function(){standardize();}" >Standardize</button>
+    </div>
+    <div style="margin-left: 5px">
+        <button type="button" data-bind="click: function(){convertNameToFullName();}">Convert name to full name</button>
+    </div>
+</div>
+<div>
+    <h2>Full name: <span data-bind="text: full_name"></span></h2>
+</div>

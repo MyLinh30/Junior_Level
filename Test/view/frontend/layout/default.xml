@@ -1,0 +1,11 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <head>
+        <css src="Magenest_Test::css/showrewardpoint.css"/>
+    </head>
+    <body>
+        <referenceContainer name="header.panel" >
+            <block name="add.reward.point" after="-" class="Magenest\Test\Block\PointsCustomer" template="Magenest_Test::showrewardpoint.phtml" cacheable="false"/>
+        </referenceContainer>
+    </body>
+</page>

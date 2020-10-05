@@ -1,0 +1,10 @@
+.admin__menu .level-0.item-magenest > a:before {
+    background-image: url('../images/clock.jpg');
+    display: inline-block;
+    width: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 35px;
+    content:"";
+}

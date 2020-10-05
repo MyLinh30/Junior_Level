@@ -1,0 +1,12 @@
+<?php
+/**
+ * @var Magenest\Bt2\Block\Adminhtml\ChangeColor $block
+ */
+?>
+<input type="hidden" id="color-text-menu-clock" value="<?php echo $block->getValueClockText(); ?>" />
+
+<script>
+    require(['changeConfigColor'],function(changeConfigColor){
+        changeConfigColor();
+    })
+</script>

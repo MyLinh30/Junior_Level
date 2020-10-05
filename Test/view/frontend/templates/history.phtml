@@ -1,0 +1,27 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magenest\Test\Block\HistoryPointCustomer $block */
+?>
+<h1>History Plus Point Customer</h1>
+<table border="1">
+    <thead style="background-color: greenyellow">
+        <th><strong>ID</strong></th>
+        <th><strong>Customer ID</strong></th>
+        <th><strong>Point</strong></th>
+        <th><strong>Date</strong></th>
+    </thead>
+    <tbody>
+         <?php foreach ($block->getHistoryPointCustomerLogin() as $item) : ?>
+            <tr>
+                <td><?php echo $item->getId()?></td>
+                <td><?php echo $item->getCustomerId()?></td>
+                <td><?php echo $item->getPoint()?></td>
+                <td><?php echo $item->getTime()?></td>
+            </tr>
+         <?php endforeach; ?>
+    </tbody>
+</table>

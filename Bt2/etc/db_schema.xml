@@ -1,0 +1,11 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="magenest_countdown" resource="default" engine="innodb" comment="Countdown table">
+        <column xsi:type="int" name="id" padding="11" nullable="false" identity="true" unsigned="true" comment="countdown id"/>
+        <column xsi:type="varchar" name="title" nullable="false" comment="title"/>
+        <column xsi:type="varchar" name="status" length="10" nullable="false" comment="status"/>
+        <column xsi:type="timestamp" name="countdown_value" nullable="false" comment="countdown value"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

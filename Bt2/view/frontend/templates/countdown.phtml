@@ -1,0 +1,28 @@
+
+
+<?php
+/**
+ * @var Magenest\Bt2\Block\CountDownHeader $block;
+ */
+?>
+
+
+
+<div data-bind="scope: 'example-scope'" style="color: <?php echo $block->getValueClockColor(); ?>" class="count-down-wrapper">
+    <h3 style="color: <?php echo $block->getValueClockText();?> !important; margin-top: auto;margin-bottom: auto"><?php echo $block->getValueClockTitle(); ?></h3>
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "example-scope": {
+                            "component": "Magenest_Bt2/js/CountDown",
+                            "template":"Magenest_Bt2/timer"
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</div>
