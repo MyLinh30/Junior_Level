@@ -21,4 +21,30 @@
             <argument name="resourceModel" xsi:type="string">Magenest\Test\Model\ResourceModel\HistoryPoint</argument>
         </arguments>
     </virtualType>
+
+
+    <virtualType name="Magenest\Test\ReferenceImageUpload" type="Magenest\Test\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">test/tmp/feature</argument>
+            <argument name="basePath" xsi:type="string">test/feature</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+            <argument name="allowedMimeTypes" xsi:type="array">
+                <item name="jpg" xsi:type="string">image/jpg</item>
+                <item name="jpeg" xsi:type="string">image/jpeg</item>
+                <item name="gif" xsi:type="string">image/gif</item>
+                <item name="png" xsi:type="string">image/png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magenest\Test\Controller\Adminhtml\Feature\Image\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Magenest\Test\ReferenceImageUpload</argument>
+        </arguments>
+    </type>
 </config>

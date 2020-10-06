@@ -65,19 +65,43 @@
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="source" xsi:type="string">wedform</item>
                     <item name="dataScope" xsi:type="string">name</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
                 </item>
             </argument>
         </field>
-        <field name="url">
+
+
+        <field formElement="imageUploader" name="url" sortOrder="40" >
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="dataType" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true">Link gift</item>
-                    <item name="formElement" xsi:type="string">input</item>
                     <item name="source" xsi:type="string">wedform</item>
-                    <item name="dataScope" xsi:type="string">url</item>
                 </item>
             </argument>
+            <settings>
+                <elementTmpl>ui/form/element/uploader/image</elementTmpl>
+                <dataType>string</dataType>
+                <label translate="true">Image</label>
+                <visible>true</visible>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+            <formElements>
+                <imageUploader>
+                    <settings>
+                        <required>true</required>
+                        <uploaderConfig>
+                            <param xsi:type="url" name="url" path="test/index/upload"/>
+                        </uploaderConfig>
+                        <previewTmpl>Magenest_Test/image-preview</previewTmpl>
+                        <openDialogTitle>Choose Image</openDialogTitle>
+                        <allowedExtensions>jpg jpeg gif png</allowedExtensions>
+                        <maxFileSize>4194304</maxFileSize>
+                    </settings>
+                </imageUploader>
+            </formElements>
         </field>
         <field name="description">
             <argument name="data" xsi:type="array">
@@ -87,6 +111,9 @@
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="source" xsi:type="string">wedform</item>
                     <item name="dataScope" xsi:type="string">description</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
                 </item>
             </argument>
         </field>

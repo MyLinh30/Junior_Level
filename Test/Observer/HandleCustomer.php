@@ -10,8 +10,11 @@ use Magento\Framework\Event\ObserverInterface;
 class HandleCustomer implements ObserverInterface
 {
     protected $customerFactory;
-    public function __construct(\Magento\Customer\Model\CustomerFactory $customerFactory)
+    protected $scopeConfig;
+    public function __construct(\Magento\Customer\Model\CustomerFactory $customerFactory,
+                                \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig)
     {
+        $this->scopeConfig = $scopeConfig;
         $this->customerFactory = $customerFactory;
     }
 
@@ -19,7 +22,7 @@ class HandleCustomer implements ObserverInterface
     {
         $data = $observer->getCustomer();
         $model = $this->customerFactory->create()->load($data->getId());
-        $model->setPointCustomer(50);
+        $model->setPointCustomer($this->scopeConfig->getValue('point_default/general/show', \Magento\Store\Model\ScopeInterface::SCOPE_STORE));
         $model->save();
         // TODO: Implement execute() method.
     }
