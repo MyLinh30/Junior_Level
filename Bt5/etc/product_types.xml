@@ -1,0 +1,5 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Catalog:etc/product_types.xsd">
+    <type name="new_product_type" label="New Product Type" modelInstance="Magenest\Bt5\Model\Product\Type\NewProductType" indexPriority="10" sortOrder="10">
+        <priceModel instance="Magenest\Bt5\Model\Product\Price"/>
+    </type>
+</config>

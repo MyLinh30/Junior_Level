@@ -1,0 +1,18 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magenest\Bt1\Api\RuleRepositoryInterface" type="Magenest\Bt1\Model\RuleRepository" />
+    <preference for="Magenest\Bt1\Api\Data\RuleInterface" type="Magenest\Bt1\Model\Rule"/>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="bt1_rule_listing_data_source" xsi:type="string">Magenest\Bt1\Model\ResourceModel\Rule\Grid\Collection</item>
+            </argument>
+        </arguments>
+
+    </type>
+    <virtualType name="Magenest\Bt1\Model\ResourceModel\Rule\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">magenest_rules</argument>
+            <argument name="resourceModel" xsi:type="string">Magenest\Bt1\Model\ResourceModel\Rule</argument>
+        </arguments>
+    </virtualType>
+</config>

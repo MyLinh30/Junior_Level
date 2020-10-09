@@ -1,0 +1,14 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+<!--    <type name="Magenest\Bt8\Controller\MyController\Index">-->
+<!--        <arguments>-->
+<!--            <argument name="myInterface" xsi:type="object">Magenest\Bt8\Model\MyModuleRepository</argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
+<!--    <type name="Magento\Catalog\Api\ProductRepositoryInterface">-->
+<!--        <plugin name="add.specal.product.name" type="Magenest\Bt8\Plugin\CustomProductName" sortOrder="1" disabled="false" />-->
+<!--    </type>-->
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="chang.name.product" type="Magenest\Bt8\Plugin\CustomProductName" disabled="false" />
+    </type>
+<!--    <preference for="Magenest\Bt8\Api\MyInterface" type="Magenest\Bt8\Model\MyModuleRepository"/>-->
+</config>

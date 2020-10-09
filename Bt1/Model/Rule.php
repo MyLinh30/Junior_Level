@@ -4,7 +4,9 @@
 namespace Magenest\Bt1\Model;
 
 
-class Rule extends \Magento\Framework\Model\AbstractModel
+use Magenest\Bt1\Api\Data\RuleInterface;
+
+class Rule extends \Magento\Framework\Model\AbstractModel implements RuleInterface
 {
     public function __construct(\Magento\Framework\Model\Context $context,
                                 \Magento\Framework\Registry $registry,
@@ -19,4 +21,13 @@ class Rule extends \Magento\Framework\Model\AbstractModel
         $this->_init('Magenest\Bt1\Model\ResourceModel\Rule');
     }
 
+    public function getTitle()
+    {
+       return $this->getData(self::TITLE);
+    }
+
+    public function setTitle($name)
+    {
+        return $this->getData(self::TITLE, $name);
+    }
 }

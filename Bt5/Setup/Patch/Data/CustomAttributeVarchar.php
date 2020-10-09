@@ -4,14 +4,15 @@
 namespace Magenest\Bt5\Setup\Patch\Data;
 
 
+use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
 use Magento\Eav\Model\Entity\Attribute\SetFactory as AttributeSetFactory;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
-use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Eav\Setup\EavSetupFactory;
 
 
-class CustomerGroupAttribute implements DataPatchInterface
+
+class CustomAttributeVarchar implements DataPatchInterface
 {
     private $moduleDataSetup;
     private $eavSetupFactory;
@@ -49,21 +50,21 @@ class CustomerGroupAttribute implements DataPatchInterface
         $this->moduleDataSetup->getConnection()->startSetup();
         $setup = $this->eavSetupFactory->create(['setup' => $this->moduleDataSetup]);
         $setup->addAttribute(
-            \Magento\Catalog\Model\Product::ENTITY, 'customer_groups', [
-            'type' => 'text',
-            'label' => 'Customer Group',
-            'input' => 'select',
-            'source'=> 'Magenest\Bt5\Model\Config\Source\ShowCustomerGroup',
+            \Magento\Catalog\Model\Product::ENTITY, 'custom_attribute_varchar', [
+            'type' => 'varchar',
+            'label' => 'Custom Attribute Varchar ',
+            'input' => 'text',
             'user_defined' => false,
-            'sort_order' => 210,
+            'sort_order' => 220,
             'visible' => true,
             'required' => false,
             'global' => ScopedAttributeInterface::SCOPE_GLOBAL,
-            'position' => 600,
+            'position' => 610,
             'system' => 0,
             'used_in_product_form' => true,
             'used_in_product_listing' => true,
         ]);
         $this->moduleDataSetup->getConnection()->endSetup();
     }
+
 }

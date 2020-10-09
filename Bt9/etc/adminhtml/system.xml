@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation=
+    "urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="price" translate="label" sortOrder="500">
+            <label>CONFIG PRICE PRODUCT</label>
+        </tab>
+        <section id="hide_price" translate="label" type="text"
+                 sortOrder="100" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>Show/Hide Price</label>
+            <tab>price</tab>
+            <resource>Magenest_Bt9::config_point</resource>
+            <group id="general" translate="label" type="text"
+                   sortOrder="1" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Show/Hide Price Product Setting</label>
+                <field id="show" translate="label"
+                       type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Show/Hide Price</label>
+                    <source_model>Magenest\Bt9\Model\Config\Source\ShowHide</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

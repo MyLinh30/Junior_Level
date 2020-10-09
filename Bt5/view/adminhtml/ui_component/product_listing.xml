@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="product_columns">
+        <column name="custom_attribute" class="Magenest\Bt5\Ui\Component\Listing\Column\CustomeAdminUser">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="sorting" xsi:type="string">asc</item>
+                    <item name="label" xsi:type="string" translate="true">Custom Attribute</item>
+                    <item name="componentDisbale" xsi:type="boolean">true</item>
+                </item>
+            </argument>
+        </column>
+    </columns>
+</listing>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation=
+    "urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+            id="Magenest_Bt1::show"
+            title="Rule Management"
+            module="Magenest_Bt1"
+            sortOrder="50"
+            resource="Magenest_Bt1::show"
+        />
+        <add
+            id="Magenest_Bt1::grid"
+            title="Rule Grid"
+            module="Magenest_Bt1"
+            sortOrder="55"
+            parent="Magenest_Bt1::show"
+            action="bt1/index/index/"
+            resource="Magenest_Bt1::grid"
+        />
+    </menu>
+</config>
