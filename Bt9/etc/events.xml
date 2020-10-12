@@ -1,0 +1,8 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="catalog_product_load_after">
+        <observer name="catalog_product_load_after_observer" instance="Magenest\Bt9\Observer\AddAdditionalOptions" disabled="false"/>
+    </event>
+<!--    <event name="checkout_submit_all_after">-->
+<!--        <observer name="checkout_submit_all_after_observer" instance="Magenest\Bt9\Observer\MessageOrderItem" disabled="false"/>-->
+<!--    </event>-->
+</config>
